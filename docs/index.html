@@ -1,21 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="noindex">
-  <title>{{CUSTOMER_NAME}} — Site Provisioned</title>
-  <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; display: flex; align-items: center; justify-content: center; min-height: 100vh; margin: 0; background: #f6f8fa; color: #24292f; }
-    .card { text-align: center; padding: 3rem 4rem; background: #fff; border: 1px solid #d0d7de; border-radius: 8px; }
-    h1 { font-size: 1.25rem; font-weight: 600; margin: 0 0 .5rem; }
-    p { margin: 0; color: #57606a; font-size: .9rem; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Solmara Aesthetics &amp; Wellness | Med Spa in Draper, Utah</title>
+<meta name="description" content="Solmara Aesthetics &amp; Wellness is Draper, Utah's boutique med spa for facials, injectables, laser hair removal, microneedling, and IV wellness. New guests: $99 Signature Glow Facial.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--pine:#233A31;--pine-deep:#18291F;--champagne:#C6A15B;--champagne-soft:#E5D3AF;--ivory:#FBF7F0;--blush:#EAD9CC;--ink:#2A2A26;--white:#FFFFFF;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Jost',sans-serif;color:var(--ink);background:var(--ivory);line-height:1.65;font-weight:300;}
+h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:500;color:var(--pine);}
+a{color:var(--pine);}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px;}
+header{background:var(--ivory);border-bottom:1px solid var(--champagne-soft);position:sticky;top:0;z-index:10;}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0;}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;}
+.logo-word{font-family:'Cormorant Garamond',serif;font-size:1.55rem;letter-spacing:.28em;color:var(--pine);font-weight:600;}
+.logo-sub{display:block;font-family:'Jost',sans-serif;font-size:.58rem;letter-spacing:.42em;color:var(--champagne);text-transform:uppercase;font-weight:500;}
+.nav-links{display:flex;gap:28px;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;}
+.nav-links a{text-decoration:none;color:var(--pine);}
+.btn{display:inline-block;background:var(--pine);color:var(--white);padding:13px 30px;border-radius:2px;text-decoration:none;font-size:.85rem;letter-spacing:.14em;text-transform:uppercase;font-weight:500;}
+.btn:hover{background:var(--pine-deep);}
+.btn-gold{background:var(--champagne);color:var(--pine-deep);}
+.hero{background:linear-gradient(160deg,var(--pine) 0%,var(--pine-deep) 100%);color:var(--ivory);padding:96px 0 88px;text-align:center;}
+.hero h1{color:var(--ivory);font-size:3.1rem;line-height:1.15;margin:18px 0 14px;font-weight:500;}
+.hero .kicker{color:var(--champagne);letter-spacing:.4em;text-transform:uppercase;font-size:.75rem;font-weight:500;}
+.hero p.lead{max-width:620px;margin:0 auto 34px;font-size:1.08rem;color:#E8E4DA;}
+.offer{background:var(--champagne);color:var(--pine-deep);padding:20px 0;text-align:center;font-size:1rem;letter-spacing:.04em;}
+.offer strong{font-weight:600;}
+section{padding:76px 0;}
+.section-kicker{color:var(--champagne);letter-spacing:.34em;text-transform:uppercase;font-size:.72rem;font-weight:500;text-align:center;}
+section h2{font-size:2.3rem;text-align:center;margin:10px 0 44px;}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:26px;}
+.card{background:var(--white);border:1px solid var(--champagne-soft);border-radius:3px;padding:34px 30px;}
+.card h3{font-size:1.45rem;margin-bottom:10px;}
+.card p{font-size:.95rem;}
+.card .price{display:block;margin-top:14px;color:var(--champagne);font-weight:500;letter-spacing:.06em;font-size:.85rem;text-transform:uppercase;}
+.band{background:var(--blush);}
+.team .card{text-align:center;}
+.team .avatar{width:96px;height:96px;border-radius:50%;background:var(--pine);color:var(--champagne-soft);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:2rem;margin:0 auto 18px;}
+.team .role{color:var(--champagne);font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;font-weight:500;display:block;margin-bottom:12px;}
+blockquote{background:var(--white);border-left:3px solid var(--champagne);padding:26px 28px;font-size:.98rem;font-style:italic;border-radius:3px;}
+blockquote cite{display:block;margin-top:14px;font-style:normal;font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;color:var(--champagne);}
+.contact{background:var(--pine);color:var(--ivory);}
+.contact h2,.contact h3{color:var(--ivory);}
+.contact a{color:var(--champagne-soft);}
+.contact .grid{gap:40px;}
+.contact .label{color:var(--champagne);font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;font-weight:500;display:block;margin-bottom:8px;}
+.contact p{font-size:1rem;}
+footer{background:var(--pine-deep);color:#9DB0A5;padding:30px 0;font-size:.78rem;text-align:center;}
+footer .demo{color:#C8B98F;margin-top:10px;max-width:760px;margin-left:auto;margin-right:auto;}
+@media(max-width:720px){.nav-links{display:none;}.hero h1{font-size:2.2rem;}}
+</style>
 </head>
 <body>
-  <div class="card">
-    <h1>{{CUSTOMER_NAME}}</h1>
-    <p>Site provisioned. First deliverable pending.</p>
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top">
+      <svg width="44" height="44" viewBox="0 0 48 48" fill="none" aria-hidden="true"><circle cx="24" cy="24" r="22" stroke="#C6A15B" stroke-width="1.5"/><path d="M24 8c3 6 3 10 0 16-3-6-3-10 0-16Z" fill="#C6A15B"/><path d="M24 40c-3-6-3-10 0-16 3 6 3 10 0 16Z" fill="#C6A15B"/><path d="M8 24c6-3 10-3 16 0-6 3-10 3-16 0Z" fill="#C6A15B"/><path d="M40 24c-6 3-10 3-16 0 6-3 10-3 16 0Z" fill="#C6A15B"/><circle cx="24" cy="24" r="4.5" fill="#233A31" stroke="#C6A15B"/></svg>
+      <span><span class="logo-word">SOLMARA</span><span class="logo-sub">Aesthetics &amp; Wellness</span></span>
+    </a>
+    <nav class="nav-links"><a href="#services">Services</a><a href="#team">Team</a><a href="#reviews">Reviews</a><a href="#visit">Visit</a></nav>
+    <a class="btn btn-gold" href="tel:+18015550148">Book Now</a>
   </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <div class="kicker">Boutique Med Spa · Draper, Utah</div>
+    <h1>Glow like the canyon light.</h1>
+    <p class="lead">Physician-directed aesthetics and wellness in the heart of Draper. Honest guidance, natural-looking results, and treatments tailored to you — never a one-size-fits-all package.</p>
+    <a class="btn btn-gold" href="tel:+18015550148">Book a Free Consultation</a>
+  </div>
+</section>
+
+<div class="offer"><div class="wrap"><strong>New Guest Offer:</strong> $99 Signature Glow Facial (reg. $185) — includes a complimentary skin analysis &amp; treatment plan.</div></div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="section-kicker">Our Menu</div>
+    <h2>Services</h2>
+    <div class="grid">
+      <div class="card"><h3>Signature Glow Facial</h3><p>Our medical-grade deep-cleanse, exfoliation, extraction, and hydration facial — customized to your skin analysis. The Solmara staple.</p><span class="price">From $185 · New guests $99</span></div>
+      <div class="card"><h3>Wrinkle Relaxers</h3><p>Precise, conservative neurotoxin treatments for forehead lines, frown lines, and crow's feet. Administered by our RN injector under physician direction.</p><span class="price">$12 / unit</span></div>
+      <div class="card"><h3>Dermal Fillers</h3><p>Subtle restoration of volume in lips, cheeks, and jawline with hyaluronic-acid fillers. We favor a less-is-more philosophy.</p><span class="price">From $650 / syringe</span></div>
+      <div class="card"><h3>Laser Hair Removal</h3><p>Comfortable, effective laser hair removal for all skin types, from small touch-up areas to full legs. Packages of six sessions.</p><span class="price">From $79 / session</span></div>
+      <div class="card"><h3>Microneedling + PRP</h3><p>Collagen-induction therapy for texture, scarring, and tone — with optional platelet-rich plasma for accelerated results.</p><span class="price">From $325</span></div>
+      <div class="card"><h3>IV Wellness Therapy</h3><p>Hydration, recovery, and beauty blends delivered in our lounge. Popular with athletes, travelers, and busy parents alike.</p><span class="price">From $145</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="team" class="band team">
+  <div class="wrap">
+    <div class="section-kicker">Who You'll See</div>
+    <h2>Your Care Team</h2>
+    <div class="grid">
+      <div class="card"><div class="avatar">EM</div><h3>Dr. Elena Marsh, MD</h3><span class="role">Medical Director</span><p>Board-certified physician overseeing every treatment protocol at Solmara. Believes great aesthetics start with honest medicine.</p></div>
+      <div class="card"><div class="avatar">CR</div><h3>Camille Reyes, RN, BSN</h3><span class="role">Lead Aesthetic Nurse Injector</span><p>A decade of injectables experience and a reputation for natural, camera-ready results. Known for her conservative, artful touch.</p></div>
+      <div class="card"><div class="avatar">BO</div><h3>Brynn Okafor, LME</h3><span class="role">Master Esthetician</span><p>Corrective skincare specialist behind the Signature Glow Facial. Builds long-term skin plans, not one-off treatments.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="wrap">
+    <div class="section-kicker">Client Love</div>
+    <h2>What Draper Is Saying</h2>
+    <div class="grid">
+      <blockquote>"First med spa where I didn't feel upsold. Camille talked me OUT of a syringe I didn't need. Results are so natural my sister just thinks I sleep well."<cite>— Melissa T., Draper</cite></blockquote>
+      <blockquote>"The Glow Facial is worth every penny. My skin has never looked this good and the treatment plan Brynn built actually fits my budget."<cite>— Jordan K., South Jordan</cite></blockquote>
+      <blockquote>"Clean, calm, zero pressure. Dr. Marsh reviewed my history before my first injectable appointment. That's the standard everywhere should have."<cite>— Aisha R., Sandy</cite></blockquote>
+    </div>
+  </div>
+</section>
+
+<section id="visit" class="contact">
+  <div class="wrap">
+    <div class="section-kicker">Visit Solmara</div>
+    <h2>Find Us in Draper</h2>
+    <div class="grid">
+      <div><span class="label">Address</span><p>13492 S Vista Gate Blvd, Suite 240<br>Draper, UT 84020</p></div>
+      <div><span class="label">Contact</span><p>Phone: <a href="tel:+18015550148">(801) 555-0148</a><br>Email: <a href="mailto:hello@solmaraaesthetics.com">hello@solmaraaesthetics.com</a></p></div>
+      <div><span class="label">Hours</span><p>Mon–Fri: 9:00a – 6:00p<br>Saturday: 9:00a – 2:00p<br>Sunday: Closed</p></div>
+      <div><span class="label">Service Area</span><p>Draper, Sandy, South Jordan, Riverton &amp; Lehi — serving the Salt Lake and Utah County corridor.</p></div>
+    </div>
+    <p style="text-align:center;margin-top:44px;"><a class="btn btn-gold" href="tel:+18015550148">Call to Book Your Visit</a></p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>© 2026 Solmara Aesthetics &amp; Wellness · Draper, Utah</div>
+    <div class="demo">Demonstration website for a fictional business, operated by North Vista Marketing for product testing. All names, staff, reviews, addresses, phone numbers, and offers are fictitious. Not a real medical practice.</div>
+  </div>
+</footer>
 </body>
 </html>
